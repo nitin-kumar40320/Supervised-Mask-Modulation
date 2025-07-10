@@ -8,6 +8,8 @@ This repository provides the code for implementation of Supervised Mask Modulati
 ## Mask Modulation
 The methodology of the model revolves around a novel mask transformation technique. The technique involves segregating out the false negatives from the predicted samples, followed by dilation. This dilated mask is added back to the ground truth to evolve the modulated mask. This modulated mask is utilized for training in further epochs. 
 
+![Mask transformation](figures/MaskModulation.png)
+
 ---
 ## Training Strategies
 As a part of this study, we have attmpted several ways to utilize this transformation. They have been presented as the hard and soft training strategies. In each strategy, the first 20% epochs are unaltered for vanilla pre-training of the model. Each of them utilizes the mask transformation in different ways to generate suitable outputs.
