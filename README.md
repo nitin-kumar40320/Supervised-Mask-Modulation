@@ -2,7 +2,8 @@
 Image segmentation often forms a popular task in computer vision. There have been several attempts at developing refined data-specific techniques for different segmentation tasks. In this repository, we present the code for a refined training algorithm which has proved to be effective in enahcning all kinds of segmentation tasks. The training strategy is architecture agnostic and works on various different kinds of data. The algorithm utilizes the False Negatives predicted by the model to enhance the training over the following epochs. 
 This repository provides the code for implementation of Supervised Mask Modulation in Python3. The figure below presents the flow of the algorithm. 
 
-![Supervised Mask Modulation Workflow](figures/main_workflow.png)
+
+<img src="figures/main_workflow.png" alt="Supervised Mask Modulation Workflow" width="50%"/>
 
 ---
 ## Mask Modulation
