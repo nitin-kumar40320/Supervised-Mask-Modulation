@@ -1,14 +1,14 @@
 # Supervised-Mask-Modulation
 Image segmentation often forms a popular task in computer vision. There have been several attempts at developing refined data-specific techniques for different segmentation tasks. In this repository, we present the code for a refined training algorithm which has proved to be effective in enahcning all kinds of segmentation tasks. The training strategy is architecture agnostic and works on various different kinds of data. The algorithm utilizes the False Negatives predicted by the model to enhance the training over the following epochs. 
-This repository provides the code for implementation of Supervised Mask Modulation on UNet Architecture. The figure below presents the flow of the algorithm. 
+This repository provides the code for implementation of Supervised Mask Modulation in Python3. The figure below presents the flow of the algorithm. 
 
-![Supervised Mask Modulation Workflow](figures/SMM.png)
+![Supervised Mask Modulation Workflow](figures/main_workflow.png)
 
 ---
 ## Mask Modulation
 The methodology of the model revolves around a novel mask transformation technique. The technique involves segregating out the false negatives from the predicted samples, followed by dilation. This dilated mask is added back to the ground truth to evolve the modulated mask. This modulated mask is utilized for training in further epochs. 
 
-![Mask transformation](figures/MaskModulation.png)
+![Mask transformation](figures/mask_modulation.png)
 
 ---
 ## Training Strategies
@@ -18,13 +18,14 @@ As a part of this study, we have attmpted several ways to utilize this transform
 
 ---
 ## Dataset Format
-The dataset directory format has to be similar to the one used in nnUNet. The module expects four directories within the parent dataset directory: 
+The dataset directory format is suggested to be similar to the one used in nnUNet. The module expects four directories within the parent dataset directory: 
 - imagesTr : Training Samples
 - labelsTr : Training Labels
 - imagesTs : Testing Samples
 - labelsTr : Testing Labels
+Such directory structure is suggested but it is not necessary for working of the provided pipeline code.
 
-Ensure that the image and lable names match as per the convention. A sample has been provided as follows:
+Ensure that the image and lable names match as per the convention. This is necessary for the working of code. A sample has been provided as follows:
 
     Dataset005_Bombr/
     ├── imagesTr
@@ -46,17 +47,11 @@ Ensure that the image and lable names match as per the convention. A sample has 
         ├── Bombr_486.png
         └── ...
 
-The code has been programmed to run KFold Cross Vaidation on the training dataset, with a default value of 5 folds. The training dataset, is therefore split up into training and validation sets for each fold, which is recorded as a json file in the respective results directory.
+The code has been programmed to run KFold Cross Vaidation on the training dataset, with given seeds. The model is initialized as per the seeds and everything else in the training procedure remains same in all the folds.
 
 ---
 ## Code usage
-The code for both strategies has been included in separate directories, named as SMMv1 and SMMv2. Follow the corresponding steps to run the experiments:
-
-### SMM***v1***
-### SMM***v2***
-- First create the KFold Splits using the command : `cd SMMv2; python generate_splits.py --dataset Datasetxxx_name --folds <int>` (To run 5 Folds, you may skip the `--folds <int>` part)
-- Then, you may start trainng the model : `python main.py --folds [<int> or all]`. When selected `all`, the model starts training for 5 folds. The folds can also be specified as `<int1>,<int2>,<int3>` for running only certain specific folds.
-- Once the model is trained, the model predictions on test set are automatically stored in directory called 'test_outputs'.
+The code for both the strategies along with other discussed versions has been included in separate directories. Follow the steps mentioned in their corresponding readme files to run the experiments.
 
 ### Evaluation Statistics
-
+The metrics can be calculated using the metric calculation file in utilities directory along with the model codes, namely UNet and SegNet, used in the experiments.
