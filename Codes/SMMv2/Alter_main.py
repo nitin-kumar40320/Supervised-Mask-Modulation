@@ -22,7 +22,7 @@ from concurrent.futures import ProcessPoolExecutor, as_completed
 
 
 # === Paths & Config ===
-input_dir = '/home/nitin1/segmentation/cityscapes'
+input_dir = '/cityscapes'
 path_to_images_dir = os.path.join(input_dir, "imagesTr")
 path_to_masks_dir = os.path.join(input_dir, "labelsTr")
 test_images_dir = os.path.join(input_dir, "imagesTs")
@@ -32,8 +32,8 @@ learning_rate = 1e-5
 num_classes = 8
 # seeds = [1337, 1234, 999, 2024, 2025]
 seeds = [2025]
-log_dir_parent = f"/home/nitin1/segmentation/Results_segformer/Alter_{total_epochs}/Cityscapes"
-model_path = '/home/nitin1/segmentation/Codes/segformer/num_classes_8'
+log_dir_parent = f"/Results_segformer/Alter_{total_epochs}/Cityscapes"
+model_path = '/Codes/segformer/num_classes_8'
 
 # === Seed Functions ===
 def set_seed(seed: int):

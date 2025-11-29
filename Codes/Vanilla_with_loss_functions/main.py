@@ -7,7 +7,7 @@ from vanilla_loss import VanillaLoss
 from tversky_loss import TverskyCombinedLoss
 from focal_loss import FocalCombinedLoss
 import sys
-sys.path.append('/home/nitin1/segmentation/Codes')
+sys.path.append('/Codes')
 from unet_model import UNet
 from segnet import SegNet
 import os
@@ -19,9 +19,9 @@ learning_rate = 0.1
 num_classes = 8 ## including background
 do_resize_input_images = True
 seeds = [2025]
-path_to_images_dir = "/home/nitin1/segmentation/cityscapes/imagesTr"
-path_to_masks_dir = "/home/nitin1/segmentation/cityscapes/labelsTr"
-log_dir = f"/home/nitin1/segmentation/Results_unet/Vanilla_{total_epochs}/cityscapes"
+path_to_images_dir = "/cityscapes/imagesTr"
+path_to_masks_dir = "/cityscapes/labelsTr"
+log_dir = f"/Results_unet/Vanilla_{total_epochs}/cityscapes"
 
 
 def set_seed(seed: int):

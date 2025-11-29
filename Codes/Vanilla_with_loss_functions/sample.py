@@ -2,8 +2,8 @@ import os
 import cv2
 import numpy as np
 
-dir_images = "/home/nitin1/segmentation/Dataset005_Bombr/imagesTr"
-dir_masks = "/home/nitin1/segmentation/Dataset005_Bombr/labelsTr"
+dir_images = "/Dataset005_Bombr/imagesTr"
+dir_masks = "/Dataset005_Bombr/labelsTr"
 
 files = sorted(os.listdir(dir_masks))
 # msk_size = {(1200, 1920):0, (1200, 1600):0, (913, 1461):0}

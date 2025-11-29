@@ -11,7 +11,7 @@ from GMM_Trainer import Trainer
 from GMM_Trainer_segformer import Segformer_Trainer
 from combined_loss import combined_loss_function
 import sys
-sys.path.append('/home/nitin1/segmentation/Codes')
+sys.path.append('/Codes')
 from unet_model import UNet
 from segnet import SegNet
 from transformers import SegformerForSemanticSegmentation
@@ -23,10 +23,10 @@ learning_rate = 1e-5
 number_of_classes = 8 # Including background
 classes_to_focus_on = [0,1,2,3,4,5,6,7]
 seeds = [1337, 1234]
-path_to_images_dir = "/home/nitin1/segmentation/cityscapes/imagesTr"
-path_to_masks_dir = "/home/nitin1/segmentation/cityscapes/labelsTr"
-log_dir = f"/home/nitin1/segmentation/Results_segformer/GMM_{total_epochs}/Cityscapes"
-model_path = '/home/nitin1/segmentation/Codes/segformer/num_classes_8'
+path_to_images_dir = "/cityscapes/imagesTr"
+path_to_masks_dir = "/cityscapes/labelsTr"
+log_dir = f"/Results_segformer/GMM_{total_epochs}/Cityscapes"
+model_path = '/Codes/segformer/num_classes_8'
 
 
 def set_seed(seed: int):

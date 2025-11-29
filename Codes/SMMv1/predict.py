@@ -3,14 +3,14 @@ import os
 from torch.utils.data import DataLoader
 from data_loader import Data_Loader_Test
 import sys
-sys.path.append('/home/nitin1/segmentation')
+sys.path.append('')
 from unet_model import UNet
 from segnet import SegNet
 import cv2
 from color_scheme import ColorMask
 
-test_images_dir = "/home/nitin1/segmentation/Dataset015_Drive/imagesTs"
-results_dir = "/home/nitin1/segmentation/Results_segnet/GMM_250/Drive"
+test_images_dir = "/Dataset015_Drive/imagesTs"
+results_dir = "/Results_segnet/GMM_250/Drive"
 num_classes = 2 ## including background
 seeds = [1337, 1234, 999, 2024, 2025]
 

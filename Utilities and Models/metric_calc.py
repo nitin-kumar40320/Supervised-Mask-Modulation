@@ -15,8 +15,8 @@ from concurrent.futures import ProcessPoolExecutor
 # Parameters
 num_classes = 2  # Number of classes including background
 is_0_background = True
-gt_folder = "/home/nitin1/segmentation/Dataset065_Cracks/labelsTs"
-results_folder = "/home/nitin1/segmentation/Results_segnet/Vanilla_1000/Cracks"
+gt_folder = "/Dataset065_Cracks/labelsTs"
+results_folder = "/Results_segnet/Vanilla_1000/Cracks"
 seeds = [1337, 1234, 999, 2024, 2025]
 image_extension = ".png"
 

@@ -6,7 +6,7 @@ from BoundaryLoss_Trainer import Trainer
 from BoundaryLoss_Trainer_segformer import Segformer_Trainer
 from combined_loss import CombinedLoss
 import sys
-sys.path.append('/home/nitin1/segmentation/Codes')
+sys.path.append('/Codes')
 from unet_model import UNet
 from segnet import SegNet
 from transformers import SegformerForSemanticSegmentation
@@ -20,10 +20,10 @@ num_classes = 8 ## including background
 classes_to_focus_on = [0,1,2,3,4,5,6,7]
 # seeds = [1337, 1234, 999, 2024, 2025]
 seeds = [999, 2024]
-path_to_images_dir = "/home/nitin1/segmentation/cityscapes/imagesTr"
-path_to_masks_dir = "/home/nitin1/segmentation/cityscapes/labelsTr"
-log_dir = f"/home/nitin1/segmentation/Results_segformer/BoundaryLoss_{total_epochs}/cityscapes"
-model_path = '/home/nitin1/segmentation/Codes/segformer/num_classes_8'
+path_to_images_dir = "/cityscapes/imagesTr"
+path_to_masks_dir = "/cityscapes/labelsTr"
+log_dir = f"/Results_segformer/BoundaryLoss_{total_epochs}/cityscapes"
+model_path = '/Codes/segformer/num_classes_8'
 
 
 def set_seed(seed: int):

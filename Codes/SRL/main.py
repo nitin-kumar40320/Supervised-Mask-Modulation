@@ -12,7 +12,7 @@ from SRL_Trainer_segformer import Segformer_Trainer
 from combined_loss import combined_loss_function
 from tubed_skel_transform import tubed_skeleton_transform
 
-sys.path.append("/home/nitin1/segmentation/Codes")
+sys.path.append("/Codes")
 from unet_model import UNet
 from segnet import SegNet
 from transformers import SegformerForSemanticSegmentation
@@ -23,10 +23,10 @@ learning_rate= 1e-5
 num_classes = 8    ## including background
 # seeds = [1337, 1234, 999, 2024, 2025]
 seeds = [2024, 2025]
-path_to_images_dir = "/home/nitin1/segmentation/cityscapes/imagesTr"
-path_to_masks_dir = "/home/nitin1/segmentation/cityscapes/labelsTr"
-log_dir = f"/home/nitin1/segmentation/Results_segformer/SRL_{total_epochs}/cityscapes"
-model_path = '/home/nitin1/segmentation/Codes/segformer/num_classes_8'
+path_to_images_dir = "/cityscapes/imagesTr"
+path_to_masks_dir = "/cityscapes/labelsTr"
+log_dir = f"/Results_segformer/SRL_{total_epochs}/cityscapes"
+model_path = '/Codes/segformer/num_classes_8'
 
 
 def set_seed(seed: int):

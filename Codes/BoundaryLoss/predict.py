@@ -3,14 +3,14 @@ import os
 from torch.utils.data import DataLoader
 from data_loader import Data_Loader_Test
 import sys
-sys.path.append('/home/nitin1/segmentation')
+sys.path.append('')
 from unet_model import UNet
 from segnet import SegNet
 import cv2
 from color_scheme import ColorMask
 
-test_images_dir = "/home/nitin1/segmentation/Dataset065_Cracks/imagesTs"
-results_dir = "/home/nitin1/segmentation/Results_unet/BoundaryLoss_1000/Cracks"
+test_images_dir = "/Dataset065_Cracks/imagesTs"
+results_dir = "/Results_unet/BoundaryLoss_1000/Cracks"
 num_classes = 2 ## including background
 seeds = [1337, 1234, 999, 2024, 2025]
 
