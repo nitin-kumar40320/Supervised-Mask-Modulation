@@ -1,0 +1,10 @@
+nohup: ignoring input
+[CONFIG] Running in single-GPU per process mode.
+Launching seed 2025 process on GPU 0
+[Single-GPU Mode] Model and Loss share cuda:0
+Found 2903 images to process.
+All 2903 altered masks generated.
+Number of training samples: 2903 
+Starting Training on cuda:0 for seed 2025...
+Starting Threshold : 8.030611843707902e-05
+Ended Training for seed 2025 on cuda:0.
