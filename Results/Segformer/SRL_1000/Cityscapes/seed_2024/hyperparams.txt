@@ -1,0 +1,11 @@
+Total Epochs : 1000
+Batch Size : 2
+Learning Rate : 1e-05
+------------------------------
+Data Processing:
+Compose([
+  Resize(p=1.0, area_for_downscale=None, height=512, interpolation=1, mask_interpolation=0, width=512),
+  RandomBrightnessContrast(p=0.2, brightness_by_max=True, brightness_limit=(-0.2, 0.2), contrast_limit=(-0.2, 0.2), ensure_safe_range=True),
+  Normalize(p=1.0, max_pixel_value=255.0, mean=(0.5, 0.5, 0.5), normalization='standard', std=(0.5, 0.5, 0.5)),
+  ToTensorV2(p=1.0, transpose_mask=False),
+], p=1.0, bbox_params=None, keypoint_params=None, additional_targets={'alt_mask': 'mask'}, is_check_shapes=False)
